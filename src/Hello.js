@@ -8,7 +8,7 @@ class Hello extends Component {
        <h1>Hello World</h1>
        <p>Welcome to react</p>
     </div>
-      )
+      );
     }
 }
 
