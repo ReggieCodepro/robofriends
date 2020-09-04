@@ -1,11 +1,11 @@
 import React from 'react';
 import CarList from './CardList'
-import SearchBox from './Searchbox'
+import SearchBox from './SearchBox'
 import { robots } from './robots';
 
 const App = () => {
     return (
-        <div>
+        <div className='tc'>
           <h1>RoboFriends </h1>
           <SearchBox />
           <CarList robots={robots}/>
