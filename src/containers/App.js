@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import CarList from './CardList'
-import SearchBox from './SearchBox'
+import CarList from '..Components/CardList'
+import SearchBox from '.Components./SearchBox'
 import { robots } from './robots';
-import Scroll from './Scroll';
-import './App.css'
+import Scroll from '.Components./Scroll';
+import './containers/App.css'
 //State: is an object that describe //props come out of state
 
 
