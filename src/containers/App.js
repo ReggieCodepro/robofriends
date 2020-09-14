@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CarList from '../Components/CardList'
 import SearchBox from '../Components/SearchBox'
 import Scroll from '../Components/Scroll';
+import ErrorBoundry from '../Components/ErrorBoundry';
 import './App.css'
 //State: is an object that describe //props come out of state
 
@@ -37,7 +38,9 @@ class App extends Component {
                 <h1 className='f1'>RoboFriends </h1>
                 <SearchBox searchChange={this.onSearchChange} />
                 <Scroll>
+                <ErrorBoundry>
                 <CarList robots={filteredRobots}/>
+                </ErrorBoundry>
                 </Scroll>
         </div>
     );
