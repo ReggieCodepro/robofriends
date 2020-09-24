@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import {Provider, } from 'react-redux';
+import {createStore, combineReducers} from 'redux';
 import './index.css';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
@@ -9,7 +9,8 @@ import { searchRobots } from './reducers';
 import 'tachyons';
 
 
-const store = createStore(searchRobots)
+const rootReducer = combineReducers({ searchRobots })
+const store = createStore(rootReducer)
 
 ReactDOM.render(<Provider store={store}>
                     <App />
@@ -19,4 +20,4 @@ ReactDOM.render(<Provider store={store}>
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+serviceWorker.register();
