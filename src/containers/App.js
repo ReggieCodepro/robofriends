@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import CardList from '../Components/CardList';
 import CarList from '../Components/CardList'
 import SearchBox from '../Components/SearchBox'
 import Scroll from '../Components/Scroll';
@@ -13,7 +12,7 @@ import {setSearchField} from '../actions'
 
 const mapStateToProps = state => {
     return {
-        searchField: state.searchRobots.searchField
+        searchField: state.searchField
     }
 }
 
@@ -41,6 +40,7 @@ class App extends Component {
         const { robots} = this.state;
         const {searchField, onSearchChange} = this.props;
         const filteredRobots = robots.filter(robot =>{
+            console.log(searchField);
             return robot.name.toLowerCase().includes(searchField.toLowerCase());
         })
         return !robots.length ?
